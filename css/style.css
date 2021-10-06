@@ -1,0 +1,254 @@
+/* ESTILOS GENERALES */
+/* Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); 
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+/* Variables*/
+:root{
+    /* Color */
+    --color_body: #5A57F3;
+    --color_general: #06D6A0;
+    --color_boxes: #FFFEFE;
+    --color_btndisabled: #E6FAF5;
+
+    /* Fuente */
+    --fuente: Poppins;
+}
+
+
+/* Mobile First */
+body{
+    /* Tamaño */
+    width: 100%;
+    height: 100%;
+
+    /* Fuente */
+    font-family: var(--fuente);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Fondo */
+    background: var(--color_body);
+}
+
+.container{
+    width: 1000px;
+    height: 100%;
+    margin: 20px;
+
+    /* Bordes redondeados y sombra */
+    border-radius: 16px;
+    box-shadow: #3f3cd6 0px 2px 8px 0px;
+
+    /* Fondo */
+    background: var(--color_boxes);    
+}  
+
+.title{
+    width: 100%;
+    padding-top: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+
+    /* Fuente */
+    font-weight: bold;
+    font-size: 15px;
+
+    /* Posición */
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    
+}
+
+.title:after {
+    content: "";
+    position: absolute;
+    left: 56%;
+    margin-left: -50px;
+    bottom: 0;
+    width: 50px;
+    border-bottom: 3px solid var(--color_general);
+}
+
+/* Botones */
+.box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; 
+}
+
+.box .buttons{
+    padding: 10px 20px;
+
+    /* Borde y Sombra */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 32px;
+
+    /* Fondo */
+    background-color: var(--color_boxes);
+}
+
+.btn{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 32px;
+    cursor: pointer;
+
+    /* Fuente */
+    font-family: var(--fuente);
+    font-size: 10px;
+    
+
+    /* Fondo y color de fuente */
+    background-color: var(--color_general);
+    color: var(--color_btndisabled);
+}
+
+.sign_up{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* Clase para el toggle */
+.disabled{
+    /* Fondo y color de fuente */
+    background-color: var(--color_btndisabled);
+    color: var(--color_general);
+}
+
+/* Imagenes */
+.bas{
+    background-image: url(../icons/grafico-circular.png);
+}
+
+.prem{
+    background-image: url(../icons/grafico-linea.png);
+}
+
+.busi{
+    background-image: url(../icons/edificio.png);
+}
+
+.icon{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    
+    /* Fondo y ubicación de imagen */
+    background-color: var(--color_general);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.promos h3{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.promos ul li{
+    list-style: none;
+}
+
+.promos{
+    text-align: center;
+}
+
+.price h4{
+    font-size: 40px;
+}
+
+.price h4 span{
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.price, .info{
+    margin-bottom: 20px;
+}
+
+.info{
+    font-size: 13px;
+    line-height: 30px;
+}
+
+.basic, .premium, .business{
+    width: 250px;
+    height: 550px;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 16px;
+
+    /* Sombra */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+@media only screen and (min-width: 450px){
+
+    .title:after {
+        left: 54%;
+    }
+
+    .price h4{
+        font-size: 40px;
+    }
+
+    /* Ancho de los divs promo */
+    .basic, .premium, .business{
+        width: 350px;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    .title:after {
+        left: 53%;
+    }
+
+    .info{
+        font-size: 13px;
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 900px){
+    .container{
+        margin: 20px;
+        height: auto;
+    }
+
+    .title:after{
+        left: 52%;
+    }
+
+    .promos{
+        display: flex;
+    }
+
+    .basic, .premium, .business{
+        width: 300px;
+        height: auto;
+        padding: 20px 20px;
+        margin-top: 30px;
+    }
+
+    .sign_up:hover{
+        /* Fondo y color de fuente */
+        background-color: var(--color_btndisabled);
+        color: var(--color_general);
+        transition: all .3s;
+
+        font-weight: bold;
+
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    
+}
+
